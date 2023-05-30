@@ -14,8 +14,10 @@ public class Even {
             number = (int) (Math.random() * 100);
             System.out.println("Question: " + number + "\n");
             choise = in.nextLine();
+            System.out.println("Your answer: " + choise + "\n");
             if (((number % 2 == 0) & (choise.equals("yes"))) || ((number % 2 == 1) & (choise.equals("no")))) {
                 System.out.println("Correct!\n");
+                numberGame++;
             }
             if ((number % 2 == 1) & (choise.equals("yes"))) {
                 System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.\n" +
@@ -32,13 +34,8 @@ public class Even {
                         "Let's try again " + name);
                 exam = false;
             }
-
-            numberGame++;
-
-
-
         }
-        if (numberGame == 3) {
+        if ((numberGame == 3) & (exam)) {
             System.out.println("Congratulations, " + name + "\n");
         }
 
