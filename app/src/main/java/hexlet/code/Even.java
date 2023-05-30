@@ -32,13 +32,14 @@ public class Even {
                         "Let's try again " + name);
                 exam = false;
             }
-            if (numberGame == 3) {
-                System.out.println("Congratulations, " + name + "\n");
-            }
+
             numberGame++;
 
 
 
+        }
+        if (numberGame == 3) {
+            System.out.println("Congratulations, " + name + "\n");
         }
 
 
