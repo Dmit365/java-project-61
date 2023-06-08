@@ -6,7 +6,7 @@ public class StringCheck {
             System.out.println("Correct!");
         } else {
             System.out.println(answerPlayer + " is wrong answer ;(. Correct answer was " + answer +
-                    ". Let's try again, " + name);
+                    ". Let's try again, " + name + "!");
             exam = false;
         }
         return exam;
