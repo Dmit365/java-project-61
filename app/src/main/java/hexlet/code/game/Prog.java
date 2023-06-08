@@ -1,7 +1,6 @@
 package hexlet.code.game;
 import hexlet.code.Cong;
 import hexlet.code.NumCheck;
-
 import java.util.Scanner;
 import java.util.Arrays;
 

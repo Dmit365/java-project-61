@@ -1,7 +1,6 @@
 package hexlet.code.game;
 import hexlet.code.Cong;
 import hexlet.code.StringCheck;
-
 import java.util.Scanner;
 
 public class Even {
