@@ -6,7 +6,5 @@ public class Cli {
         Scanner in = new Scanner(System.in);
         String name = in.nextLine();
         System.out.println("Hello " + name);
-        //return "Hello " + name;
-
     }
 }

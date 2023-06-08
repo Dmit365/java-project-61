@@ -6,16 +6,12 @@ public class Prime {
     public static void gamePrime(String name) {
         Scanner in = new Scanner(System.in);
         byte numberGame = 0;
-        int remainder = -1;
         boolean exam = true;
-        boolean examAnswer = false;
-        int number = 0;
-        String answer = null;
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.\n");
         while ((exam) & (numberGame != 3)) {
-            answer = "no";
-            examAnswer = false;
-            number = (int) (Math.random() * 100 + 1);
+            String answer = "no";
+            boolean examAnswer = false;
+            int number = (int) (Math.random() * 100 + 1);
             System.out.println("Question: " + number + "\n");
             String answerPlayer = in.nextLine();
             System.out.println("Your answer: " + answerPlayer);
