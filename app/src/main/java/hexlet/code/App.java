@@ -21,7 +21,7 @@ public class App {
             System.out.println("Your choice: " + gameNumber);
             if (gameNumber.equals("1")) {
                 name = Greet.greetings(name);
-
+                gameNumber = "0";
             }
             if (gameNumber.equals("2")) {
                 name = Greet.greetings(name);
