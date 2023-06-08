@@ -10,20 +10,24 @@ public class Calc {
         int answer = 0;
         final int multiplicityNumber = 10;
         final byte numberPossibleSign = 3;
+        final byte minus = 2;
+        final byte plus = 1;
+        final byte multiply = 3;
+
         System.out.println("What is the result of the expression?");
         while ((exam) & (numberGame != maxGame)) {
            int numberOne = (int) (Math.random() * multiplicityNumber);
             int numberTwo = (int) (Math.random() * multiplicityNumber);
             byte sign = (byte) (Math.random() * numberPossibleSign + 1);
-            if (sign == 1) {
+            if (sign == plus) {
                 System.out.println("Question: " + numberOne + " + " + numberTwo);
                 answer = numberOne + numberTwo;
             }
-            if (sign == 2) {
+            if (sign == minus) {
                     System.out.println("Question: " + numberOne + " - " + numberTwo);
                     answer = numberOne - numberTwo;
             }
-            if (sign == 3) {
+            if (sign == multiply) {
                 System.out.println("Question: " + numberOne + " * " + numberTwo);
                 answer = numberOne * numberTwo;
             }

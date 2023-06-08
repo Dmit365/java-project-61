@@ -1,5 +1,4 @@
 package hexlet.code;
-import java.lang.Math;
 import java.util.Scanner;
 import java.util.Arrays;
 
@@ -9,10 +8,15 @@ public class Prog {
         boolean exam = true;
         byte numberGame = 0;
         final byte maxGame = 3;
+        final int maxSize = 10;
+        final int minSize = 5;
+        final int range = maxSize - minSize + 1;
+        final int multiplicityNumber = 100;
+        final int multiplicityStep = 100;
         while ((exam) & (numberGame != maxGame)) {
-            byte sizeArray = (byte) (Math.random() * 5 + 5);
-            int firstNumber = (int) (Math.random() * 100);
-            int step = (int) (Math.random() * 100);
+            byte sizeArray = (byte) ((Math.random() * range) + minSize);
+            int firstNumber = (int) (Math.random() * multiplicityNumber);
+            int step = (int) (Math.random() * multiplicityStep);
             String[] array = new String[sizeArray];
             array[0] = Integer.toString(firstNumber);
             byte answerIndex = (byte) (Math.random() * sizeArray - 1);
@@ -22,7 +26,7 @@ public class Prog {
             }
             String answer = array[answerIndex];
             array[answerIndex] = "..";
-            String arrayToString = Arrays.deepToString(array).replace("[" , "").replace("]" , "").replace("," ,"");
+            String arrayToString = Arrays.deepToString(array).replace("[", "").replace("]", "").replace(",", "");
             System.out.println("Question: " + arrayToString);
             String answerPlayer = in.nextLine();
             System.out.println("Your answer: " + answerPlayer);
