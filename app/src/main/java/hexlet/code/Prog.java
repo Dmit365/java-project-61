@@ -21,7 +21,8 @@ public class Prog {
             }
             String answer = array[answerIndex];
             array[answerIndex] = "..";
-            System.out.println("Question: " + Arrays.deepToString(array));
+            String arrayToString = Arrays.deepToString(array).replace("[", "").replace("]", "");;
+            System.out.println("Question: " + arrayToString);
             String answerPlayer = in.nextLine();
             System.out.println("Your answer: " + answerPlayer);
             exam = NumCheck.numberCheck(name, answerPlayer, Integer.parseInt(answer), exam);
