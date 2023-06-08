@@ -1,4 +1,5 @@
 package hexlet.code;
+import hexlet.code.game.*;
 import org.apache.commons.lang3.StringUtils;
 import java.util.Scanner;
 

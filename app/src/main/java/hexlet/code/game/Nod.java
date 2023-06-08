@@ -1,4 +1,7 @@
-package hexlet.code;
+package hexlet.code.game;
+import hexlet.code.Cong;
+import hexlet.code.NumCheck;
+
 import java.util.Scanner;
 
 public class Nod {
