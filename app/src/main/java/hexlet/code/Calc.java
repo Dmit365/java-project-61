@@ -38,9 +38,8 @@ public class Calc {
             answerPlayer = in.nextLine();
             System.out.println("Your answer: " + answerPlayer + "\n");
             exam = NumCheck.numberCheck(name, answerPlayer, answer, exam);
-            Cong.congratulation(name, numberGame, exam);
             numberGame++;
+            Cong.congratulation(name, numberGame, exam);
         }
-
     }
 }

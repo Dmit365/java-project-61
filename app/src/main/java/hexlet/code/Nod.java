@@ -11,7 +11,7 @@ public class Nod {
         int interimNumberOne = 0;
         int interimNumberTwo = 0;
         boolean exam = true;
-        int numberGame = 0;
+        byte numberGame = 0;
         int remainder = -1;
         String answerPlayer = null;
         System.out.println("Find the greatest common divisor of given numbers.\n");
@@ -28,25 +28,10 @@ public class Nod {
                 interimNumberOne = interimNumberTwo;
                 interimNumberTwo = remainder;
             }
-            if (!StringUtils.isNumeric(answerPlayer)) {
-                System.out.println(answerPlayer + " is wrong answer ;(. Correct answer was " +  interimNumberOne +
-                        ". Let's try again, " + name);
-                exam = false;
-            } else {
-                if (Integer.parseInt(answerPlayer) == interimNumberOne) {
-                    System.out.println("Correct!\n");
-                    numberGame++;
-                } else {
-                    System.out.println(answerPlayer + " is wrong answer ;(. Correct answer was " + interimNumberOne +
-                            ". Let's try again, " + name);
-                    exam = false;
-                }
-                if ((numberGame == 3) & (exam)) {
-                    System.out.println("Congratulations, " + name + "\n");
-                }
-            }
+            exam = NumCheck.numberCheck(name, answerPlayer, interimNumberOne, exam);
+            numberGame++;
+            Cong.congratulation(name, numberGame, exam);
             remainder = -1;
         }
     }
-
 }

@@ -11,7 +11,7 @@ public class Prog {
         byte sizeArray = 0;
         int firstNumber = 0;
         boolean exam = true;
-        int numberGame = 0;
+        byte numberGame = 0;
         int step = 0;
         byte answerIndex = 0;
         String answer = null;
@@ -37,7 +37,10 @@ public class Prog {
             System.out.println("Question: " + Arrays.deepToString(array));
             String answerPlayer = in.nextLine();
             System.out.println("Your answer: " + answerPlayer);
-            if (!StringUtils.isNumeric(answerPlayer)) {
+            exam = NumCheck.numberCheck(name, answerPlayer, Integer.parseInt(answer), exam);
+            numberGame++;
+            Cong.congratulation(name, numberGame, exam);
+            /*if (!StringUtils.isNumeric(answerPlayer)) {
                 System.out.println(answerPlayer + " is wrong answer ;(. Correct answer was " +  answer +
                         ". Let's try again, " + name);
                 exam = false;
@@ -53,12 +56,7 @@ public class Prog {
                 if ((numberGame == 3) & (exam)) {
                     System.out.println("Congratulations, " + name + "\n");
                 }
-            }
-
-
-
+            }*/
         }
-
-
     }
 }

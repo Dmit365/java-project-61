@@ -1,12 +1,11 @@
 package hexlet.code;
 import java.lang.Math;
-import org.apache.commons.lang3.StringUtils;
 import java.util.Scanner;
 
 public class Prime {
     public static void gamePrime(String name) {
         Scanner in = new Scanner(System.in);
-        int numberGame = 0;
+        byte numberGame = 0;
         int remainder = -1;
         boolean exam = true;
         boolean examAnswer = false;
@@ -34,7 +33,10 @@ public class Prime {
             if (!examAnswer) {
                 answer = "yes";
             }
-            if (answerPlayer.equals(answer)) {
+            exam = StringCheck.stringCheck(name, answerPlayer, answer, exam);
+            numberGame++;
+            Cong.congratulation(name, numberGame, exam);
+            /*if (answerPlayer.equals(answer)) {
                 System.out.println("Correct!\n");
                 numberGame++;
             } else {
@@ -44,10 +46,8 @@ public class Prime {
             }
             if ((numberGame == 3) & (exam)) {
                 System.out.println("Congratulations, " + name + "\n");
-                }
+                }*/
             }
-
         }
-
     }
 
