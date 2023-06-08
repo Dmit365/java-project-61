@@ -26,25 +26,30 @@ public class App {
             if (gameNumber.equals("2")) {
                 name = Greet.greetings(name);
                 Even.gameEven(name);
+                gameNumber = "0";
             }
             if (gameNumber.equals("3")) {
                 name = Greet.greetings(name);
                 Calc.gameCalc(name);
+                gameNumber = "0";
             }
             if (gameNumber.equals("4")) {
                 name = Greet.greetings(name);
                 Nod.gameNode(name);
+                gameNumber = "0";
             }
             if (gameNumber.equals("5")) {
                 name = Greet.greetings(name);
                 Prog.gameProg(name);
+                gameNumber = "0";
             }
             if (gameNumber.equals("6")) {
                 name = Greet.greetings(name);
                 Prime.gamePrime(name);
+                gameNumber = "0";
             }
             if ((!StringUtils.isNumeric(gameNumber)) || (Integer.parseInt(gameNumber) > 6)){
-                System.out.println("wrong choice please try again.\n");
+                System.out.println("wrong choice please try again.");
             }
         } while (Integer.parseInt(gameNumber) !=0);
 

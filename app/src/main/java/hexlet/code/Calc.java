@@ -8,7 +8,7 @@ public class Calc {
         boolean exam = true;
         byte numberGame = 0;
         int answer = 0;
-        System.out.println("What is the result of the expression?\n");
+        System.out.println("What is the result of the expression?");
         while ((exam) & (numberGame != 3)) {
            int numberOne = (int) (Math.random() * 10);
             int numberTwo = (int) (Math.random() * 10);
@@ -31,7 +31,7 @@ public class Calc {
                 answer = numberOne * numberTwo;
             }
             String answerPlayer = in.nextLine();
-            System.out.println("Your answer: " + answerPlayer + "\n");
+            System.out.println("Your answer: " + answerPlayer);
             exam = NumCheck.numberCheck(name, answerPlayer, answer, exam);
             numberGame++;
             Cong.congratulation(name, numberGame, exam);

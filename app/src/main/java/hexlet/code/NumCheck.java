@@ -10,7 +10,7 @@ public class NumCheck {
             exam = false;
         } else {
             if (Integer.parseInt(answerPlayer) == answer) {
-                System.out.println("Correct!\n");
+                System.out.println("Correct!");
             } else {
                 System.out.println(answerPlayer + " is wrong answer ;(. Correct answer was " + answer +
                         ". Let's try again, " + name);

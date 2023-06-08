@@ -15,7 +15,7 @@ public class Prog {
             String[] array = new String[sizeArray];
             array[0] = Integer.toString(firstNumber);
             byte answerIndex = (byte) (Math.random() * sizeArray - 1);
-            System.out.println("What number is missing in the progression?\n");
+            System.out.println("What number is missing in the progression?");
             for (var i = 1; i < sizeArray; i++) {
                 array[i] = Integer.toString(Integer.parseInt(array[i-1]) + step);
             }

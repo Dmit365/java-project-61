@@ -8,13 +8,13 @@ public class Nod {
         boolean exam = true;
         byte numberGame = 0;
         int remainder = -1;
-        System.out.println("Find the greatest common divisor of given numbers.\n");
+        System.out.println("Find the greatest common divisor of given numbers.");
         while ((exam) & (numberGame != 3)) {
             int numberOne = (int) (Math.random() * 1000 + 10);
             int numberTwo = (int) (Math.random() * 100);
-            System.out.println("Question: " + numberOne + " " + numberTwo + "\n");
+            System.out.println("Question: " + numberOne + " " + numberTwo);
             String answerPlayer = in.nextLine();
-            System.out.println("Your answer: " + answerPlayer + "\n");
+            System.out.println("Your answer: " + answerPlayer);
             int interimNumberOne = numberOne;
             int interimNumberTwo = numberTwo;
             while (remainder != 0) {

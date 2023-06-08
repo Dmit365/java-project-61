@@ -7,12 +7,12 @@ public class Prime {
         Scanner in = new Scanner(System.in);
         byte numberGame = 0;
         boolean exam = true;
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.\n");
+        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         while ((exam) & (numberGame != 3)) {
             String answer = "no";
             boolean examAnswer = false;
             int number = (int) (Math.random() * 100 + 1);
-            System.out.println("Question: " + number + "\n");
+            System.out.println("Question: " + number);
             String answerPlayer = in.nextLine();
             System.out.println("Your answer: " + answerPlayer);
             if ((number == 2) || (number == 3)){

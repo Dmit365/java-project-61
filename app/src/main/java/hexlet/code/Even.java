@@ -11,9 +11,9 @@ public class Even {
         System.out.println(" Answer 'yes' if the number is even, otherwise answer 'no'.");
         while ((exam) & (numberGame != 3)) {
             int number = (int) (Math.random() * 100);
-            System.out.println("Question: " + number + "\n");
+            System.out.println("Question: " + number);
             String answerPlayer = in.nextLine();
-            System.out.println("Your answer: " + answerPlayer + "\n");
+            System.out.println("Your answer: " + answerPlayer);
             if (number % 2 == 0) {
                 answer = "yes";
             }
