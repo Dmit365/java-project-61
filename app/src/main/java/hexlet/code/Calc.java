@@ -9,7 +9,7 @@ public class Calc {
         int numberOne = 0;
         int numberTwo = 0;
         boolean exam = true;
-        int numberGame = 0;
+        byte numberGame = 0;
         byte sign = 0;
         int answer = 0;
         String answerPlayer = null;
@@ -23,8 +23,13 @@ public class Calc {
                 answer = numberOne + numberTwo;
             }
             if (sign == 2) {
-                System.out.println("Question: " + numberOne + "-" + numberTwo);
-                answer = numberOne - numberTwo;
+                if (numberOne >= numberTwo) {
+                    System.out.println("Question: " + numberOne + "-" + numberTwo);
+                    answer = numberOne - numberTwo;
+                } else {
+                    System.out.println("Question: " + numberTwo + "-" + numberOne);
+                    answer = numberTwo - numberOne;
+                }
             }
             if (sign == 3) {
                 System.out.println("Question: " + numberOne + "*" + numberTwo);
@@ -32,25 +37,9 @@ public class Calc {
             }
             answerPlayer = in.nextLine();
             System.out.println("Your answer: " + answerPlayer + "\n");
-            if (!StringUtils.isNumeric(answerPlayer)) {
-                System.out.println(answerPlayer + " is wrong answer ;(. Correct answer was " +  answer +
-                        ". Let's try again, " + name);
-                exam = false;
-            } else {
-                if (Integer.parseInt(answerPlayer) == answer) {
-                    System.out.println("Correct!\n");
-                    numberGame++;
-                } else {
-                    System.out.println(answerPlayer + " is wrong answer ;(. Correct answer was " + answer +
-                            ". Let's try again, " + name);
-                    exam = false;
-                }
-                if ((numberGame == 3) & (exam)) {
-                    System.out.println("Congratulations, " + name + "\n");
-                }
-            }
-
-
+            exam = NumCheck.numberCheck(name, answerPlayer, answer, exam);
+            Cong.congratulation(name, numberGame, exam);
+            numberGame++;
         }
 
     }
