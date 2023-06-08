@@ -12,22 +12,18 @@ public class Calc {
         while ((exam) & (numberGame != 3)) {
            int numberOne = (int) (Math.random() * 10);
             int numberTwo = (int) (Math.random() * 10);
-            byte sign = (byte) (Math.random() * 3 + 1);
+            byte sign = 2;
+           // byte sign = (byte) (Math.random() * 3 + 1);
             if (sign == 1) {
-                System.out.println("Question: " + numberOne + "+" + numberTwo);
+                System.out.println("Question: " + numberOne + " + " + numberTwo);
                 answer = numberOne + numberTwo;
             }
             if (sign == 2) {
-                if (numberOne >= numberTwo) {
-                    System.out.println("Question: " + numberOne + "-" + numberTwo);
+                    System.out.println("Question: " + numberOne + " - " + numberTwo);
                     answer = numberOne - numberTwo;
-                } else {
-                    System.out.println("Question: " + numberTwo + "-" + numberOne);
-                    answer = numberTwo - numberOne;
-                }
             }
             if (sign == 3) {
-                System.out.println("Question: " + numberOne + "*" + numberTwo);
+                System.out.println("Question: " + numberOne + " * " + numberTwo);
                 answer = numberOne * numberTwo;
             }
             String answerPlayer = in.nextLine();
