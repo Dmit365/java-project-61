@@ -10,6 +10,5 @@ public class Greet {
         }
         System.out.println("Hello " + name);
         return  name;
-
     }
 }

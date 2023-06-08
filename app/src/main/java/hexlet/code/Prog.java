@@ -1,8 +1,6 @@
 package hexlet.code;
 import java.lang.Math;
-import java.sql.Array;
 import java.util.Scanner;
-import org.apache.commons.lang3.StringUtils;
 import java.util.Arrays;
 
 public class Prog {
@@ -23,14 +21,8 @@ public class Prog {
             array[0] = Integer.toString(firstNumber);
             answerIndex = (byte) (Math.random() * sizeArray - 1);
             System.out.println("What number is missing in the progression?\n");
-            if (firstNumber >= 50) {
-                for (var i = 1; i < sizeArray; i++) {
-                    array[i] = Integer.toString(Integer.parseInt(array[i-1]) + step);
-                }
-            } else {
-                for (var i = 1; i < sizeArray; i++) {
-                    array[i] = Integer.toString(Integer.parseInt(array[i-1]) * (int) (step / 10));
-                }
+            for (var i = 1; i < sizeArray; i++) {
+                array[i] = Integer.toString(Integer.parseInt(array[i-1]) + step);
             }
             answer = array[answerIndex];
             array[answerIndex] = "..";
@@ -40,23 +32,6 @@ public class Prog {
             exam = NumCheck.numberCheck(name, answerPlayer, Integer.parseInt(answer), exam);
             numberGame++;
             Cong.congratulation(name, numberGame, exam);
-            /*if (!StringUtils.isNumeric(answerPlayer)) {
-                System.out.println(answerPlayer + " is wrong answer ;(. Correct answer was " +  answer +
-                        ". Let's try again, " + name);
-                exam = false;
-            } else {
-                if (answerPlayer.equals(answer) ) {
-                    System.out.println("Correct!\n");
-                    numberGame++;
-                } else {
-                    System.out.println(answerPlayer + " is wrong answer ;(. Correct answer was " + answer +
-                            ". Let's try again, " + name);
-                    exam = false;
-                }
-                if ((numberGame == 3) & (exam)) {
-                    System.out.println("Congratulations, " + name + "\n");
-                }
-            }*/
         }
     }
 }

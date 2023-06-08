@@ -1,7 +1,6 @@
 package hexlet.code;
 import java.lang.Math;
 import java.util.Scanner;
-import org.apache.commons.lang3.StringUtils;
 
 public class Calc {
     public static void gameCalc(String name) {

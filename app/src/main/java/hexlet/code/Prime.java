@@ -36,17 +36,6 @@ public class Prime {
             exam = StringCheck.stringCheck(name, answerPlayer, answer, exam);
             numberGame++;
             Cong.congratulation(name, numberGame, exam);
-            /*if (answerPlayer.equals(answer)) {
-                System.out.println("Correct!\n");
-                numberGame++;
-            } else {
-                System.out.println(answerPlayer + " is wrong answer ;(. Correct answer was " + answer +
-                        ". Let's try again, " + name);
-                exam = false;
-            }
-            if ((numberGame == 3) & (exam)) {
-                System.out.println("Congratulations, " + name + "\n");
-                }*/
             }
         }
     }
