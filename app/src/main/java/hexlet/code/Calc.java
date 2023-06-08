@@ -6,10 +6,10 @@ public class Calc {
         Scanner in = new Scanner(System.in);
         boolean exam = true;
         byte numberGame = 0;
-        byte maxGame = 3;
+        final byte maxGame = 3;
         int answer = 0;
-        int multiplicityNumber = 10;
-        byte numberPossibleSign = 3;
+        final int multiplicityNumber = 10;
+        final byte numberPossibleSign = 3;
         System.out.println("What is the result of the expression?");
         while ((exam) & (numberGame != maxGame)) {
            int numberOne = (int) (Math.random() * multiplicityNumber);

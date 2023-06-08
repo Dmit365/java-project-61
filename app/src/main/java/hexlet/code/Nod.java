@@ -1,5 +1,4 @@
 package hexlet.code;
-import java.lang.Math;
 import java.util.Scanner;
 
 public class Nod {
@@ -8,8 +7,8 @@ public class Nod {
         boolean exam = true;
         byte numberGame = 0;
         int remainder = -1;
-        byte maxGame = 3;
-        int multiplicityNumber = 1000;
+        final byte maxGame = 3;
+        final int multiplicityNumber = 1000;
         int interimNumberOne = 0;
         int interimNumberTwo = 0;
         System.out.println("Find the greatest common divisor of given numbers.");

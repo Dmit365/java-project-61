@@ -7,10 +7,10 @@ public class App {
         Scanner in = new Scanner(System.in);
         String name = null; //checking if there was a name
         String gameNumber = null;
-        byte endMenu = 6;
+        final byte numberSubmenus = 6;
         do  {
-            System.out.println("Please enter the game number and press Enter.\n" +
-                    "1 - Greet\n"
+            System.out.println("Please enter the game number and press Enter.\n"
+                    + "1 - Greet\n"
                     + "2 - Even\n"
                     + "3 - Calc\n"
                     + "4 - GCD\n"
@@ -48,7 +48,7 @@ public class App {
                 Prime.gamePrime(name);
                 gameNumber = "0";
             }
-            if ((!StringUtils.isNumeric(gameNumber)) || (Integer.parseInt(gameNumber) > endMenu)) {
+            if ((!StringUtils.isNumeric(gameNumber)) || (Integer.parseInt(gameNumber) > numberSubmenus)) {
                 System.out.println("wrong choice please try again.");
             }
         } while (Integer.parseInt(gameNumber) != 0);

@@ -5,8 +5,12 @@ public class StringCheck {
         if (answerPlayer.equals(answer)) {
             System.out.println("Correct!");
         } else {
-            System.out.println(answerPlayer + " is wrong answer ;(. Correct answer was " + answer +
-                    ". Let's try again, " + name + "!");
+            System.out.println(answerPlayer
+                    + " is wrong answer ;(. Correct answer was "
+                    + answer
+                    + ". Let's try again, "
+                    + name
+                    + "!");
             exam = false;
         }
         return exam;

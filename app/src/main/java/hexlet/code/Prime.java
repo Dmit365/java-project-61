@@ -6,7 +6,7 @@ public class Prime {
         Scanner in = new Scanner(System.in);
         byte numberGame = 0;
         boolean exam = true;
-        byte maxGame = 3;
+        final byte maxGame = 3;
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         while ((exam) & (numberGame != maxGame)) {
             String answer = "no";

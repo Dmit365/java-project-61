@@ -5,10 +5,10 @@ public class Even {
     public static void gameEven(String name) {
         boolean exam = true;
         byte numberGame = 0;
-        byte maxGame = 3;
+        final byte maxGame = 3;
         Scanner in = new Scanner(System.in);
         String answer = null;
-        int multiplicityNumber = 100;
+        final int multiplicityNumber = 100;
         System.out.println(" Answer 'yes' if the number is even, otherwise answer 'no'.");
         while ((exam) & (numberGame != maxGame)) {
             int number = (int) (Math.random() * multiplicityNumber);
