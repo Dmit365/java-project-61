@@ -8,15 +8,24 @@ public class Nod {
         boolean exam = true;
         byte numberGame = 0;
         int remainder = -1;
+        byte maxGame = 3;
+        int multiplicityNumber = 1000;
+        int interimNumberOne = 0;
+        int interimNumberTwo = 0;
         System.out.println("Find the greatest common divisor of given numbers.");
-        while ((exam) & (numberGame != 3)) {
-            int numberOne = (int) (Math.random() * 1000 + 10);
-            int numberTwo = (int) (Math.random() * 100);
+        while ((exam) & (numberGame != maxGame)) {
+            int numberOne = (int) (Math.random() * multiplicityNumber);
+            int numberTwo = (int) (Math.random() * multiplicityNumber);
             System.out.println("Question: " + numberOne + " " + numberTwo);
             String answerPlayer = in.nextLine();
             System.out.println("Your answer: " + answerPlayer);
-            int interimNumberOne = numberOne;
-            int interimNumberTwo = numberTwo;
+            if (numberOne >= numberTwo) {
+                interimNumberOne = numberOne;
+                interimNumberTwo = numberTwo;
+            } else {
+                interimNumberOne = numberTwo;
+                interimNumberTwo = numberOne;
+            }
             while (remainder != 0) {
                 remainder = interimNumberOne % interimNumberTwo;
                 interimNumberOne = interimNumberTwo;
@@ -24,7 +33,7 @@ public class Nod {
             }
             exam = NumCheck.numberCheck(name, answerPlayer, interimNumberOne, exam);
             numberGame++;
-            Cong.congratulation(name, numberGame, exam);
+            Cong.congratulation(name, numberGame, exam, maxGame);
             remainder = -1;
         }
     }

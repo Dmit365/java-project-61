@@ -1,5 +1,4 @@
 package hexlet.code;
-import java.lang.Math;
 import java.util.Scanner;
 
 public class Prime {
@@ -7,8 +6,9 @@ public class Prime {
         Scanner in = new Scanner(System.in);
         byte numberGame = 0;
         boolean exam = true;
+        byte maxGame = 3;
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-        while ((exam) & (numberGame != 3)) {
+        while ((exam) & (numberGame != maxGame)) {
             String answer = "no";
             boolean examAnswer = false;
             int number = (int) (Math.random() * 100 + 1);
@@ -31,7 +31,7 @@ public class Prime {
             }
             exam = StringCheck.stringCheck(name, answerPlayer, answer, exam);
             numberGame++;
-            Cong.congratulation(name, numberGame, exam);
+            Cong.congratulation(name, numberGame, exam, maxGame);
             }
         }
     }

@@ -8,7 +8,8 @@ public class Prog {
         Scanner in = new Scanner(System.in);
         boolean exam = true;
         byte numberGame = 0;
-        while ((exam) & (numberGame != 3)) {
+        byte maxGame =3;
+        while ((exam) & (numberGame != maxGame)) {
             byte sizeArray = (byte) (Math.random() * 5 + 5);
             int firstNumber = (int) (Math.random() * 100);
             int step = (int) (Math.random() * 100);
@@ -27,7 +28,7 @@ public class Prog {
             System.out.println("Your answer: " + answerPlayer);
             exam = NumCheck.numberCheck(name, answerPlayer, Integer.parseInt(answer), exam);
             numberGame++;
-            Cong.congratulation(name, numberGame, exam);
+            Cong.congratulation(name, numberGame, exam, maxGame);
         }
     }
 }
