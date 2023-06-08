@@ -21,7 +21,7 @@ public class Prog {
             }
             String answer = array[answerIndex];
             array[answerIndex] = "..";
-            String arrayToString = Arrays.deepToString(array).replace("[", "").replace("]", "");;
+            String arrayToString = Arrays.deepToString(array).replace("[", "").replace("]", "").replace(",","");;
             System.out.println("Question: " + arrayToString);
             String answerPlayer = in.nextLine();
             System.out.println("Your answer: " + answerPlayer);
